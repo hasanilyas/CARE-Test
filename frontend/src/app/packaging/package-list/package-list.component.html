@@ -1,0 +1,20 @@
+<div class="row pt-3" style="margin-top: 60px">
+    <div class="col-3">
+      <div class="d-block">
+        <h4 class="d-inline">Packaging Materials</h4>
+        <fa [name]=" 'plus' " [pull]=" 'right' " [size]="2" routerLink="/packagingmaterials/add" ></fa>
+      </div>
+  
+      <div class="list-group" style="margin-top:20px;">
+        <div class="list-group-item" *ngFor= "let packagingmaterial of packagingmaterials" >
+          <div class="d-block">
+              <h6 class="d-inline">{{packagingmaterial.packagingmaterialName}}</h6>
+              <fa [name]="'trash'" [pull] ="'right'" (click)="deletePackaging(packagingmaterial.id)"></fa>
+              <fa [name]="'info-circle'" [pull] ="'right'" (click)="packagingDetails(packagingmaterial)"></fa>
+          </div>
+        </div>
+       
+      </div>  
+  
+    </div>
+  </div>

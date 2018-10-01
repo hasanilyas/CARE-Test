@@ -1,0 +1,21 @@
+<div class="row pt-3" style="margin-top: 60px">
+  <div class="col-3">
+    <div class="d-block">
+      <h4 class="d-inline">Warehouses</h4>
+      <fa [name]=" 'plus' " [pull]=" 'right' " [size]="2" routerLink="/warehouses/add" ></fa>
+    </div>
+
+    <div class="list-group" style="margin-top:20px;">
+      <div class="list-group-item" *ngFor= "let warehouse of warehouses" >
+        <div class="d-block">
+            <h6 class="d-inline">{{warehouse.warehouseName}}</h6>
+            <fa [name]="'trash'" [pull] ="'right'" (click)="deleteWarehouse(warehouse.id)"></fa>
+            <fa [name]="'info-circle'" [pull] ="'right'" (click)="warehouseDetails(warehouse)"></fa>
+        </div>
+        <h6 class="text-muted">City: {{warehouse.city}}</h6>
+      </div>
+     
+    </div>  
+
+  </div>
+</div>

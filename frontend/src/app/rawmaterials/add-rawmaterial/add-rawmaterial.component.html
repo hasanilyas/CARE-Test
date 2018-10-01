@@ -1,0 +1,12 @@
+<div style="margin-top: 60px">
+    <form #formData = 'ngForm' class="formgroup" (ngSubmit)="Add(formData.value)">
+      <div class="form-group">
+          <label for="name">Rawmaterial Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter Rawmaterial Name" [(ngModel)]="rawmaterial.rawmaterial_name" name="rawmaterialName">
+      </div> 
+      <div>
+          <button type="submit" [disabled]="!formData.valid" class="btn-btn-basic">Add Rawmaterial</button>
+      </div>
+    </form>
+  </div>
+  

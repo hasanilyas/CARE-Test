@@ -1,0 +1,17 @@
+<div style="margin-top: 60px">
+  <form #formData = 'ngForm' class="formgroup" (ngSubmit)="Add(formData.value)">
+    <div class="form-group">
+        <label for="name">Warehouse Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter Warehouse Name" [(ngModel)]="warehouse.warehouse_name" name="warehouseName">
+    </div>
+
+    <div class="form-group">
+        <label for="city">City Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter City Name" [(ngModel)]="warehouse.city" name="city">
+    </div>
+
+    <div>
+        <button type="submit" [disabled]="!formData.valid" class="btn-btn-basic">Add Warehouse</button>
+    </div>
+  </form>
+</div>
