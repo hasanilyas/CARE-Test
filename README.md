@@ -20,7 +20,7 @@ Frontend Folder Contains Angular part of the project
  CARETEST Folder contains the backend of the Application
  
  # What You'll Need
- MySQL version 5.6 or later
+ MySQL version 5.6 or later, 
  Maven 3.2
  # You might need eclipse 2018-09 because backend is build using Spring Tool Suite 4 which is only compatiable with Eclipse 2018-09
  
